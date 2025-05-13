@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Days';
+    src: url('Days.ttf') format('truetype');
+}
+body {
+    margin: 0;
+    font-family: 'Days', Arial, sans-serif;
+    background-image: url('Screenshot 2025-02-28 143627.png');
+
+    background-size: 150%;
+
+    background-position: top;
+
+    background-repeat: no-repeat;
+
+    color: rgb(255, 255, 255);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    margin-top: 5%;
+}
+
+.features {
+    background: rgb(0, 183, 255);
+
+    border: 2px solid rgb(0, 183, 255);
+
+    padding: 0.7%;
+
+    position: relative;
+
+    text-align: right;
+
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    max-width: 400px;
+
+}
+
+.features ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 35px 0;
+}
+
+.outer-box {
+    background: black;
+
+    padding: 10px;
+    border-radius: 12px;
+
+}

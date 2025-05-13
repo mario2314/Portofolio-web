@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Destinations</title>
+    <style>
+        @font-face {
+    font-family: 'Days';
+    src: url('Days.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Days', sans-serif;
+    background-image: url('Screenshot 2025-03-01 093656.png');
+    background-size: cover;
+    background-position: top;
+    text-align: center;
+}
+ 
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.destinations {
+    display: flex;
+    justify-content: center;
+
+    padding-left: 10px;
+    margin: 40px 0;
+}
+
+.destination {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+    .destination img {
+        width: 300px;
+        height: 200px;
+        border-radius: 15px;
+        margin: 15px;
+        display: block;
+        transition: transform 0.3s;
+        transform: translateY(0);
+
+    }
+
+    .destination:hover img {
+        transform: translateY(-10px);
+
+    }
+
+
+.book-adventure:hover {
+    background-color: #005F8A;
+    transform: translateY(-5px) scale(1.05); 
+    color: white;
+
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    transition: opacity 0.2s;
+    opacity: 0;
+
+}
+
+.destination:hover .overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+
+.book-adventure {
+    padding: 10px 20px;
+    background: linear-gradient(to right, #00AFFF, #0077FF);
+
+    color: white; 
+    display: block; /* Set display to block for centering */
+    border: none;
+    border-radius: 15px; /* Increased border radius */
+    font-family: 'Days', sans-serif; /* Using Days font */
+    margin-top: 70px; /* Increased margin from images */
+    margin-left: 500px; /* Centering the button */
+    cursor: pointer;
+    transition:  transform 0.3s; /* Added transform transition */
+}
+
+.book-adventure:hover {
+    background-color: #005F8A;
+    transform: scale(1.05); /* Scale up the button on hover */
+}
+    #waduhh {
+        font-size: 50px;
+        color: #0077FF;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="waduhh">Top Destinations</h1>
+        <div class="destinations">
+            <div class="destination" onclick="animate(this)">
+                <img src="Screenshot 2025-03-01 093607.png" alt="Bali">
+                <div class="overlay">Bali</div>
+            </div>
+            <div class="destination" onclick="animate(this)">
+                <img src="Screenshot 2025-03-01 093618.png" alt="New York">
+                <div class="overlay">New York</div>
+            </div>
+            <div class="destination" onclick="animate(this)">
+                <img src="Screenshot 2025-03-01 093626.png" alt="Athens">
+                <div class="overlay">Athens</div>
+            </div>
+        </div>
+        <button class="book-adventure">BOOK AN ADVENTURE</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="stylesheet" href="login.css" />
+   <title>Booking Form</title>
+   <style>
+      #booking-destination {
+         color: black;
+      }
+      #booking-destination option[disabled] {
+         color: #666;
+      }
+      input[type="email"] {
+         color: black;
+         background-color: transparent;
+      }
+      input[type="email"]:-webkit-autofill {
+         -webkit-text-fill-color: black !important;
+         -webkit-box-shadow: 0 0 0px 1000px transparent inset !important;
+         transition: background-color 5000s ease-in-out 0s;
+      }
+   </style>
+</head>
+<body>
+   <div class="booking">
+      <img
+         src="DALL·E 2025-03-05 07.37.51 - A sleek and modern background design for a travel theme. The background features subtle world map outlines, soft clouds, and an abstract airplane trai.webp"
+         alt="booking image"
+         class="booking__img"
+      />
+
+      <form class="booking__container" onsubmit="showNotification(event)">
+         <h1 class="booking__title">Booking Form</h1>
+
+         <div class="booking__content">
+            <div class="booking__box">
+               <div class="booking__box-input">
+                  <input
+                     type="email"
+                     required
+                     class="booking__input"
+                     id="booking-email"
+                     placeholder="Email"
+                  />
+               </div>
+            </div>
+
+            <div class="booking__box">
+               <div class="booking__box-input">
+                  <input
+                     type="password"
+                     required
+                     class="booking__input"
+                     id="booking-pass"
+                     placeholder="Password"
+                  />
+               </div>
+            </div>
+         </div>
+
+         <div class="booking__box">
+            <div class="booking__box-input">
+               <input
+                  type="date"
+                  required
+                  class="booking__input"
+                  id="booking-date"
+                  placeholder="Booking Date"
+                  min=""
+               />
+            </div>
+         </div>
+
+         <div class="booking__box">
+            <label
+               for="booking-destination"
+               style="color: #333; font-weight: bold; margin-bottom: 5px; display: block"
+               >Select Destination</label
+            >
+            <select id="booking-destination" class="booking__input" required>
+               <option value="" disabled selected>
+                  Select your destination
+               </option>
+               <option value="paris-france">Paris, France</option>
+               <option value="tokyo-japan">Tokyo, Japan</option>
+               <option value="madrid-spain">Madrid, Spain</option>
+               <option value="manchester-uk">Manchester, UK</option>
+               <option value="riyadh-saudi-arabia">Riyadh, Saudi Arabia</option>
+               <option value="new-york-usa">New York, USA</option>
+               <option value="sydney-australia">Sydney, Australia</option>
+               <option value="rome-italy">Rome, Italy</option>
+               <option value="cairo-egypt">Cairo, Egypt</option>
+               <option value="bangkok-thailand">Bangkok, Thailand</option>
+            </select>
+         </div>
+
+         <button type="submit" class="booking__button">Book Now</button>
+
+         <script>
+         const dateInput = document.getElementById("booking-date");
+         const today = new Date().toISOString().split("T")[0];
+         dateInput.setAttribute("min", today);
+
+         function showNotification(event) {
+            event.preventDefault();
+            const email = document.getElementById("booking-email").value;
+            const destination = document.getElementById("booking-destination").value;
+            const date = document.getElementById("booking-date").value;
+            if (!email || !destination || !date) {
+               alert("Please fill in all required fields.");
+               return;
+            }
+            alert(
+               `Pemberitahuan: Form berhasil dikirim!\nEmail: ${email}\nDestination: ${destination.replace(
+                  /-/g,
+                  " "
+               )}\nDate: ${date}`
+            );
+         }
+         </script>
+
+         <p class="booking__register">
+            Don't have an account? <a href="#">Register</a>
+         </p>
+      </form>
+   </div>
+</body>
+</html>

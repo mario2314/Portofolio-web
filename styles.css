@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'Decaydence';
+    src: url('Decaydence.otf') format('truetype');
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Decaydence', Arial, sans-serif;
+    background-image: url('Screenshot 2025-02-28 104553.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container {
+    max-width: 800px;
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #fff;
+
+    margin: 20px 0 10px;
+}
+
+button {
+    margin-left: 220px;
+    margin-top: 20px;
+    font-family: 'arial', Arial, sans-serif;
+
+    font-size: 1em;
+    padding: 10px 20px;
+    background-color: #007BFF;
+
+    color: #fff;
+
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+p {
+    font-size: 1.2em;
+    color: #ff0000;
+    text-shadow: #ff0000;
+    margin-left: 50px;
+}
